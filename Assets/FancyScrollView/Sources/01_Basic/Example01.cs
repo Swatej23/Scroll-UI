@@ -1,12 +1,8 @@
-﻿/*
- * FancyScrollView (https://github.com/setchi/FancyScrollView)
- * Copyright (c) 2020 setchi
- * Licensed under MIT (https://github.com/setchi/FancyScrollView/blob/master/LICENSE)
- */
-
+﻿
 using System.Linq;
+using UnityEngine;
 
-namespace UnityEngine.UI.Extensions.Examples.FancyScrollViewExample01
+namespace ScrollViewExample01
 {
     class Example01 : MonoBehaviour
     {
