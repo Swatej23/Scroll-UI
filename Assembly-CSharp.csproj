@@ -68,7 +68,6 @@
     <Compile Include="Assets\CustomScrollView\Sources\Scripts\EasingCore.cs" />
     <Compile Include="Assets\CustomScrollView\Sources\Scripts\Cell.cs" />
     <Compile Include="Assets\CustomScrollView\Sources\Scripts\MovementDirection.cs" />
-    <Compile Include="Assets\CustomScrollView\Sources\Example_01\NewBehaviourScript.cs" />
     <Compile Include="Assets\CustomScrollView\Sources\Scripts\Scroller.cs" />
     <Compile Include="Assets\CustomScrollView\Sources\Example_01\ItemData.cs" />
     <Compile Include="Assets\CustomScrollView\Sources\Example_01\ScrollView.cs" />

@@ -221,7 +221,6 @@ namespace CustomScrollView
                     : MovementDirection.Down;
         }
 
-        /// <inheritdoc/>
         void IPointerDownHandler.OnPointerDown(PointerEventData eventData)
         {
             if (!draggable || eventData.button != PointerEventData.InputButton.Left)
@@ -234,7 +233,6 @@ namespace CustomScrollView
             autoScrollState.Reset();
         }
 
-        /// <inheritdoc/>
         void IPointerUpHandler.OnPointerUp(PointerEventData eventData)
         {
             if (!draggable || eventData.button != PointerEventData.InputButton.Left)
@@ -251,7 +249,6 @@ namespace CustomScrollView
             hold = false;
         }
 
-        /// <inheritdoc/>
         void IScrollHandler.OnScroll(PointerEventData eventData)
         {
             if (!draggable)
@@ -290,7 +287,6 @@ namespace CustomScrollView
             UpdatePosition(position);
         }
 
-        /// <inheritdoc/>
         void IBeginDragHandler.OnBeginDrag(PointerEventData eventData)
         {
             if (!draggable || eventData.button != PointerEventData.InputButton.Left)
@@ -310,7 +306,6 @@ namespace CustomScrollView
             autoScrollState.Reset();
         }
 
-        /// <inheritdoc/>
         void IDragHandler.OnDrag(PointerEventData eventData)
         {
             if (!draggable || eventData.button != PointerEventData.InputButton.Left || !dragging)
@@ -347,7 +342,6 @@ namespace CustomScrollView
             UpdatePosition(position);
         }
 
-        /// <inheritdoc/>
         void IEndDragHandler.OnEndDrag(PointerEventData eventData)
         {
             if (!draggable || eventData.button != PointerEventData.InputButton.Left)
