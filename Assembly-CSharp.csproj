@@ -60,18 +60,18 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.43f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\FancyScrollView\Sources\Scripts\MovementType.cs" />
-    <Compile Include="Assets\FancyScrollView\Sources\Scripts\MovementDirection.cs" />
-    <Compile Include="Assets\FancyScrollView\Sources\01_Basic\ItemData.cs" />
-    <Compile Include="Assets\FancyScrollView\Sources\01_Basic\NewBehaviourScript.cs" />
-    <Compile Include="Assets\FancyScrollView\Sources\Scripts\ScrollDirection.cs" />
-    <Compile Include="Assets\FancyScrollView\Sources\01_Basic\ScrollView.cs" />
-    <Compile Include="Assets\FancyScrollView\Sources\Scripts\CustomScrollView.cs" />
-    <Compile Include="Assets\FancyScrollView\Sources\Scripts\EasingCore.cs" />
-    <Compile Include="Assets\FancyScrollView\Sources\01_Basic\Example01.cs" />
-    <Compile Include="Assets\FancyScrollView\Sources\Scripts\Cell.cs" />
-    <Compile Include="Assets\FancyScrollView\Sources\Scripts\Scroller.cs" />
-    <Compile Include="Assets\FancyScrollView\Sources\01_Basic\Cell.cs" />
+    <Compile Include="Assets\CustomScrollView\Sources\Example_01\Cell.cs" />
+    <Compile Include="Assets\CustomScrollView\Sources\Scripts\MovementType.cs" />
+    <Compile Include="Assets\CustomScrollView\Sources\Scripts\CustomScrollView.cs" />
+    <Compile Include="Assets\CustomScrollView\Sources\Scripts\ScrollDirection.cs" />
+    <Compile Include="Assets\CustomScrollView\Sources\Example_01\Example01.cs" />
+    <Compile Include="Assets\CustomScrollView\Sources\Scripts\EasingCore.cs" />
+    <Compile Include="Assets\CustomScrollView\Sources\Scripts\Cell.cs" />
+    <Compile Include="Assets\CustomScrollView\Sources\Scripts\MovementDirection.cs" />
+    <Compile Include="Assets\CustomScrollView\Sources\Example_01\NewBehaviourScript.cs" />
+    <Compile Include="Assets\CustomScrollView\Sources\Scripts\Scroller.cs" />
+    <Compile Include="Assets\CustomScrollView\Sources\Example_01\ItemData.cs" />
+    <Compile Include="Assets\CustomScrollView\Sources\Example_01\ScrollView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
