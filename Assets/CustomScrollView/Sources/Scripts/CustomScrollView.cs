@@ -1,6 +1,7 @@
 
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 namespace CustomScrollView
 {
@@ -68,14 +69,19 @@ namespace CustomScrollView
             Debug.Assert(CellPrefab != null);
             Debug.Assert(cellContainer != null);
 
-            var addCount = Mathf.CeilToInt((1f - firstPosition) / cellInterval) - pool.Count;
+            float containerWidth = cellContainer.transform.GetComponent<RectTransform>().rect.width;
+
+
+            var cellCount = Mathf.CeilToInt((1f - firstPosition) / cellInterval) + 2;
+
+            var addCount = cellCount - pool.Count;
             for (var i = 0; i < addCount; i++)
             {
                 var cell = Instantiate(CellPrefab, cellContainer).GetComponent<Cell<TItemData, TContext>>();
                 if (cell == null)
                 {
                     throw new MissingComponentException(string.Format(
-                        "FancyCell<{0}, {1}> component not found in {2}.",
+                        "Cell<{0}, {1}> component not found in {2}.",
                         typeof(TItemData).FullName, typeof(TContext).FullName, CellPrefab.name));
                 }
 
@@ -88,7 +94,14 @@ namespace CustomScrollView
 
         void UpdateCells(float firstPosition, int firstIndex, bool forceRefresh)
         {
+            int centerIndex = firstIndex + pool.Count / 2;
+
+            //float containerHeight = cellContainer.transform.GetComponent<RectTransform>().rect.width;
+            //int visibleCellsCount = Mathf.CeilToInt(containerHeight / (CellPrefab.transform.localScale.x) + cellInterval) + 2; // Buffer cells
+
+
             for (var i = 0; i < pool.Count; i++)
+            //for (var i = 0; i < visibleCellsCount; i++)
             {
                 var index = firstIndex + i;
                 var position = firstPosition + i * cellInterval;
@@ -113,7 +126,27 @@ namespace CustomScrollView
                 }
 
                 cell.UpdatePosition(position);
+
+
+                //int distanceFromCenter = Mathf.Abs(index - centerIndex);
+                int distanceFromCenter = Mathf.RoundToInt(index - centerIndex);
+
+                AdjustCellLayer(cell, distanceFromCenter);
             }
+        }
+
+        void AdjustCellLayer(Cell<TItemData, TContext> cell, int distanceFromCenter)
+        {
+            // Example: Use sorting order if the cell has a CanvasRenderer (for UI)
+            var sortingGroup = cell.GetComponent<SortingGroup>();
+            if (sortingGroup != null)
+            {
+                // Adjust sorting order: Higher sorting order for the center cell, and decrease as you move away
+                sortingGroup.sortingOrder = (100 - distanceFromCenter); // 100 is just an example base value
+            }
+
+            // Optional: If you want a 3D effect, modify the Z position of the cell as well
+            cell.transform.localPosition = new Vector3(cell.transform.localPosition.x, cell.transform.localPosition.y, -distanceFromCenter * 0.01f);
         }
 
         int CircularIndex(int i, int size) => size < 1 ? 0 : i < 0 ? size - 1 + (i + 1) % size : i % size;

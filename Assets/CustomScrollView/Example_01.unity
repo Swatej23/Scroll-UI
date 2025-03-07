@@ -414,7 +414,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollView: {fileID: 1492537700}
-  cellCount: 20
+  cellCount: 5
+  imageCollection: {fileID: 11400000, guid: 0d9bca2ba8cd91041bc04c6bbead79f8, type: 2}
 --- !u!114 &1412019325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -551,14 +552,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: db515ed53213a374099d1b77e2ae8816, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

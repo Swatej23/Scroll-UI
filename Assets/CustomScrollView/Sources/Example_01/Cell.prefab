@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 95340417105919662}
   - component: {fileID: 114576972619053820}
   - component: {fileID: 225935335552180272}
+  - component: {fileID: 644054351409943923}
   m_Layer: 5
   m_Name: Cell
   m_TagString: Untagged
@@ -162,6 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 95340417105919662}
   message: {fileID: 114187527074109412}
+  itemImage: {fileID: 114563267192182474}
 --- !u!225 &225935335552180272
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -174,6 +176,18 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!210 &644054351409943923
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090456633889264}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 100
+  m_SortAtRoot: 0
 --- !u!1 &1567147101442258
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,7 +247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.3019608}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
